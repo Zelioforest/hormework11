@@ -3,7 +3,9 @@
 public class Main {
     public static void main(String[] args) {
         defineALeapYear(2024);
+
         defineTypeOS(1, 2017);
+
         int numbersOfDays = calculateTheNumbersOfDays (105);
         if ( numbersOfDays != 0) {
             System.out.println("Потребуется дней: " + numbersOfDays);
