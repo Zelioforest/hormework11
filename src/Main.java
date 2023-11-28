@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         defineALeapYear(2024);
         defineTypeOS(1, 2017);
-        int numbersOfDays = calculateTheNumbersOfDays (75);
+        int numbersOfDays = calculateTheNumbersOfDays (105);
         if ( numbersOfDays != 0) {
             System.out.println("Потребуется дней: " + numbersOfDays);
         } else {
@@ -44,14 +44,12 @@ public class Main {
 
     public static int calculateTheNumbersOfDays (int deliveryDistance) {
         int timeDelivery = 1;
-        if (deliveryDistance < 100) {
-            if (deliveryDistance >= 60) {
-                return timeDelivery = timeDelivery + 2;
-            } else if (20 <= deliveryDistance && deliveryDistance < 60) {
+        if (deliveryDistance < 20) {
+            return timeDelivery;
+        } else if (deliveryDistance < 60) {
                 return timeDelivery = timeDelivery + 1;
-            } else {
-                return timeDelivery;
-            }
+        } else if (deliveryDistance < 100) {
+                return timeDelivery = timeDelivery + 2;
         } else {
             return 0;
         }
